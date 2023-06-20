@@ -11,8 +11,20 @@
                 <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">
                     {{ $event->name }}</h5>
             </a>
-            <p class="font-normal text-gray-700 mb-3 dark:text-gray-400">
-                {{ $event->description }}</p>
+            <p class="font-bold text-gray-700 mb-3 dark:text-gray-400">
+                {{ $event->city }} , {{ $event->country }}
+            </p>
+
+            <br>
+
+            <p class="font-normal text-gray-700 mb-2 dark:text-gray-300">
+                {{ $event->date }}
+            </p>
+            <p class="font-normal text-gray-700 mb-2 dark:text-gray-300">
+                {{ $event->check_in }} - {{ $event->check_out }}
+            </p>
+
+            <br><br>
 
             <a href="{{ route('event.show', $event->id ) }} ">
                 <x-button> View
